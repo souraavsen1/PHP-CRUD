@@ -92,8 +92,8 @@
         $conn = mysqli_connect('localhost', 'root', '', 'userdata') or die(mysqli_error($conn));
         $data= "SELECT * from userinfo";
         $result = $conn -> query($data) or die($conn->error);
-
       ?>
+      
     <form action="index.php" method="POST">
       <h1>User Registraion Form</h1>
       <div class="form_conatiner">

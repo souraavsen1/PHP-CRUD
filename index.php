@@ -36,7 +36,6 @@ if(isset($_POST['save'])){
     if(!mysqli_query($connection,$sql)){
         echo "Error in insertion";
     }else{
-        // echo 'Data Inserted Successfully';
         header("refresh:2, url=home.php");
 
     }
@@ -51,7 +50,6 @@ if(isset($_GET['delete'])){
     if(!mysqli_query($connection,$itemDelete)){
         echo "Something went wrong";
     }else{
-        // echo 'Data Inserted Successfully';
         header("refresh:2, url=home.php");
 
     }
@@ -90,8 +88,6 @@ if(isset($_POST['update'])){
     $connection->query("UPDATE userinfo SET fname='$fname',lname='$lname',uname='$uname',email='$email',pass='$pass',dob='$dob' WHERE id='$id'") or die($connection->error());
 
     header("refresh:2, url=home.php");
-
-
 }
 
 ?>
